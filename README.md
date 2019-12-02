@@ -30,7 +30,7 @@ Once everything is installed, now in terminal within the project type:
 npm start
 ```
 
-Now in the browser of your choice go to: localhost:5050
+Now in the browser of your choice go to: localhost:3000
 
 ## Built With
 
