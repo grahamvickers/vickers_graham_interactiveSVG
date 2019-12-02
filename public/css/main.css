@@ -38,19 +38,36 @@ section { margin-bottom: 100px; color: white; }
 
 p > span { display: block; padding-bottom: 12px; } 
 
-.popover { 
+#popover { 
   display: none;
-  position: absolute;
-  top: 18%;
-  left: 110%;
-  background-color: orange;
-  width: 350px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%); 
+  width: 50%;
   z-index: 1;
-  border-radius: 8px;
-  padding: 4px;
+  border-radius: 25px;
+  padding: 10px 10px;
+  background-color: white;
+  border: 4px solid #4A82DD;
 }
 
-.show-popover { display: block; }
+.show-popover { display: block !important   ; }
+
+#popover .close {
+  float:right;
+  padding:3px;
+  margin:5px 5px 0 0;
+  cursor: pointer;
+  font-size: 22px;
+  color: red;
+}
+
+#popover .close:hover {
+  font-size: 24px;
+
+}
 
 .see-more { 
   margin-top: 20px;

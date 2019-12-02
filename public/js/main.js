@@ -1,7 +1,7 @@
 (() => {
     // try to get the object and do stuff 
     const seeMoreButtons = document.querySelectorAll('.see-more'),
-      popOver = document.querySelector('.popover');
+      popOver = document.querySelector('#popover');
 
     const waypoint = new Waypoint({
         // what element the wayo=point is looking for 
@@ -29,7 +29,11 @@
       popOver.querySelector(".drake-bio").textContent = drakedata.bio;
 
       popOver.classList.add('show-popover');
-      el.appendChild(popOver);
+      //el.appendChild(popOver);
+    }
+
+    function closePopover(){
+      popOver.classList.remove('show-popover');
     }
 
     // run the fetch API and the DB data
@@ -55,4 +59,6 @@
     // })
 
     seeMoreButtons.forEach(button => button.addEventListener("click", fetchData));
+    
+    document.querySelector('#popover .close').addEventListener("click",closePopover);
 })();

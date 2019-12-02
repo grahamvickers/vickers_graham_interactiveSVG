@@ -35,9 +35,9 @@ app.use((err, req, res, next) => {
   res.render('error', {data: err, layout: 'errorPage'})
 })
 
-app.listen(port, () => {
+/*app.listen(port, () => {
   console.log(`app is running on ${port}`);
-})
+})*/
 
 // error handler
 app.use(function(err, req, res, next) {
